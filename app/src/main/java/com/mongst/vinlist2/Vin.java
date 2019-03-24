@@ -8,6 +8,7 @@ public class Vin {
         this.notesVin = notesVin;
     }
 
+
     private int id;
 
     private String createVin;
