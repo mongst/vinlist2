@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
 
-    ArrayList<String> vins;
+    ArrayList<Vin> vins;
 
-    public VinAdapter(ArrayList<String> vins) {
+    public VinAdapter(ArrayList<Vin> vins) {
         this.vins = vins;
     }
 // in the section of code below I replaced "parent" with "viewGroup" and the error went away.
@@ -24,7 +24,8 @@ class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(VinAdapter.ViewHolder holder, int position) {
-        holder.createVin.setText(vins.get(position));
+        holder.createVin.setText(vins.get(position).getCreateVin());
+        holder.notesVin.setText(vins.get(position).getNotesVin());
     }
 
     @Override
@@ -34,10 +35,12 @@ class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView createVin;
+        public TextView notesVin;
 
         public ViewHolder(View itemView){
             super(itemView);
             createVin = itemView.findViewById(R.id.enter_vin);
+            notesVin = itemView.findViewById(R.id.notes_vin);
         }
     }
 }

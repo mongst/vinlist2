@@ -6,9 +6,15 @@
     android:padding="12dp">
 
     <TextView
-        android:id="@+id/first_vin"
+        android:id="@+id/enter_vin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/notes_vin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"/>
 
 </LinearLayout>

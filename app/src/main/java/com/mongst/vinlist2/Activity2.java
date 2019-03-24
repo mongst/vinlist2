@@ -22,7 +22,7 @@ public class Activity2 extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     FloatingActionButton fab;
-    ArrayList<String> vins;
+    ArrayList<Vin> vins;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,10 @@ public class Activity2 extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view);
 
         vins = new ArrayList<>();
-// testing recycler view = didnt work app crashed.
+
+        // this section commented out 40:20
 //        for (int i = 0; i < 10; i++) {
+//            Vin vin = new Vin(createVin: "12345",)
 //            vins.add("01234 #" + i);
 //        }
 
