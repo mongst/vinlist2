@@ -1,5 +1,6 @@
 package com.mongst.vinlist2;
 
+
 public class Vin {
 
     public Vin(String createVin, String notesVin) {
