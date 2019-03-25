@@ -1,8 +1,7 @@
 package com.mongst.vinlist2;
 
-import android.arch.persistence.room.Entity;
-
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity

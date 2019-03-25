@@ -1,7 +1,7 @@
 package com.mongst.vinlist2;
 
-import android.arch.persistence.room.Database;
 
+import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
 @Database(entities = {Vin.class}, version = 1)
