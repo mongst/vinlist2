@@ -14,6 +14,9 @@ import android.view.View;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+
+import androidx.room.Room;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -22,7 +25,7 @@ public class Activity2 extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     FloatingActionButton fab;
-    ArrayList<Vin> vins;
+//    ArrayList<Vin> vins; **out at 51:37
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +36,20 @@ public class Activity2 extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
 
-        vins = new ArrayList<>();
+//        vins = new ArrayList<>();
 
-        // this section commented out 40:20
+//        this section commented out 40:20
+
 //        for (int i = 0; i < 10; i++) {
 //            Vin vin = new Vin(createVin: "12345",)
 //            vins.add("01234 #" + i);
 //        }
+
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "production")
+                .allowMainThreadQueries()
+                .build();
+
+        List<Vin> vins db.vinDao().getAllVins();
 
         recyclerView.setLayoutManager(new LinearLayoutManager( this));
         adapter = new VinAdapter(vins);

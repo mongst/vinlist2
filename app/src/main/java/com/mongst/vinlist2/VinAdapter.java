@@ -6,13 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
 
-    ArrayList<Vin> vins;
+    List<Vin> vins;
 
-    public VinAdapter(ArrayList<Vin> vins) {
+    public VinAdapter(List<Vin> vins) {
         this.vins = vins;
     }
 // in the section of code below I replaced "parent" with "viewGroup" and the error went away.
