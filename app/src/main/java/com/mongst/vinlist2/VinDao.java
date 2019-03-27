@@ -14,7 +14,7 @@ public interface VinDao {
     List<Vin> getAllVins();
 
     @Insert
-    void insertAll(Vin... vins);
+    void insertAll(Vin vins);
 
     @Update
     public void updateVin(Vin... vins);

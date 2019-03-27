@@ -43,4 +43,5 @@ class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
             notesVin = itemView.findViewById(R.id.notes_vin);
         }
     }
+
 }

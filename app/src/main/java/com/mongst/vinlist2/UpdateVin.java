@@ -3,18 +3,13 @@ package com.mongst.vinlist2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.room.Room;
-
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 
 
 public class UpdateVin extends AppCompatActivity {
@@ -32,17 +27,18 @@ public class UpdateVin extends AppCompatActivity {
 
         updateVin = findViewById(R.id.update_vin);
         updateNotes = findViewById(R.id.update_notes);
+        button = findViewById(R.id.button);
 
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "production")
                 .allowMainThreadQueries()
                 .build();
 
-        button.setOnClickListener((v) ->) {
+        button.setOnClickListener((v) -> {
             Log.d(TAG, "onCreate: updateVin: " + updateVin.getText().toString());
             Update update = new Update(updateVin.getText().toString(), updateNotes.getText().toString());
-            db.vinDao().insertAll(update);
+            db.vinDao().insertAll(vin);
             startActivity(new Intent(UpdateVin.this, Activity2.class));
-        };
+        });
     }
 
 }

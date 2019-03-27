@@ -33,6 +33,7 @@ public class Activity2 extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
 
+
 //        vins = new ArrayList<>();
 
 //        this section commented out 40:20
@@ -51,6 +52,13 @@ public class Activity2 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager( this));
         adapter = new VinAdapter(vins);
         recyclerView.setAdapter(adapter);
+
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Activity2.this, UpdateVin.class));
+            }
+        });
 
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
