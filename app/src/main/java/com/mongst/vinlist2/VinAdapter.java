@@ -10,9 +10,9 @@ import java.util.List;
 
 class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
 
-    List<Vin> vins;
+    private List<Vin> vins;
 
-    public VinAdapter(List<Vin> vins) {
+    VinAdapter(List<Vin> vins) {
         this.vins = vins;
     }
 // in the section of code below I replaced "parent" with "viewGroup" and the error went away.
@@ -33,14 +33,15 @@ class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
         return vins.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView createVin;
-        public TextView notesVin;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        TextView createVin;
+        TextView notesVin;
 
-        public ViewHolder(View itemView){
+        ViewHolder(View itemView){
             super(itemView);
             createVin = itemView.findViewById(R.id.enter_vin);
             notesVin = itemView.findViewById(R.id.notes_vin);
         }
     }
+
 }
