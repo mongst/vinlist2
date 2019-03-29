@@ -6,19 +6,18 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
 
 @Dao
 public interface VinDao {
-    @Query("SELECT * FROM vin")
+
+    @Query("SELECT * FROM Vin")
     List<Vin> getAllVins();
 
     @Insert
     void insertAll(Vin vins);
 
-    @Update
-    public void updateVin(Vin... vins);
+      @Delete
+    void deleteVin(Vin... vins);
 
-    @Delete
-    public void deleteVin(Vin... vins);
+
 }

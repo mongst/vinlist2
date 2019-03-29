@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Vin {
 
-    public Vin(String createVin, String notesVin) {
+    Vin(String createVin, String notesVin) {
         this.createVin = createVin;
         this.notesVin = notesVin;
     }
@@ -29,19 +29,19 @@ public class Vin {
         this.id = id;
     }
 
-    public String getCreateVin() {
+    String getCreateVin() {
         return createVin;
     }
 
-    public void setCreateVin(String createVin) {
-        this.createVin = createVin;
-    }
+//    public void setCreateVin(String createVin) {
+//        this.createVin = createVin;
+//    }
 
-    public String getNotesVin() {
+    String getNotesVin() {
         return notesVin;
     }
 
-    public void setNotesVin(String notesVin) {
-        this.notesVin = notesVin;
-    }
+//    public void setNotesVin(String notesVin) {
+//        this.notesVin = notesVin;
+//    }
 }

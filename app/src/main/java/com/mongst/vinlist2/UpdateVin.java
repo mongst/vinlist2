@@ -1,9 +1,7 @@
 package com.mongst.vinlist2;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -33,12 +31,7 @@ public class UpdateVin extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build();
 
-        button.setOnClickListener((v) -> {
-            Log.d(TAG, "onCreate: updateVin: " + updateVin.getText().toString());
-            Update update = new Update(updateVin.getText().toString(), updateNotes.getText().toString());
-            db.vinDao().insertAll(vin);
-            startActivity(new Intent(UpdateVin.this, Activity2.class));
-        });
+
     }
 
 }
