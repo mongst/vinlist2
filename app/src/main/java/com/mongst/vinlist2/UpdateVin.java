@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 
+// Update vin page
+
 public class UpdateVin extends AppCompatActivity {
 
     final static String TAG = UpdateVin.class.getSimpleName();

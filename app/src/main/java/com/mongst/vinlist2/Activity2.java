@@ -2,8 +2,6 @@ package com.mongst.vinlist2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -42,6 +40,8 @@ public class Activity2 extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         recyclerView.setOnClickListener(v -> startActivity(new Intent(Activity2.this, UpdateVin.class)));
+
+//        floating action button "add"
 
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(v -> startActivity(new Intent(Activity2.this, CreateVin.class)));

@@ -27,6 +27,7 @@ public class CreateVin extends AppCompatActivity {
         notesVin = findViewById(R.id.notes_vin);
         button = findViewById(R.id.button);
 
+//        database
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "production")
                 .allowMainThreadQueries()
                 .build();
