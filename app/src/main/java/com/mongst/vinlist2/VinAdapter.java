@@ -15,7 +15,7 @@ class VinAdapter extends RecyclerView.Adapter<VinAdapter.ViewHolder> {
     VinAdapter(List<Vin> vins) {
         this.vins = vins;
     }
-// in the section of code below I replaced "parent" with "viewGroup" and the error went away.
+
     @Override
     public VinAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.vin_row, viewGroup, false);
