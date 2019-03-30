@@ -1,15 +1,15 @@
 # vinlist2
 
-Simple android project utilizing Room as a database to store VINs (Vehicle Identification Numbers). 
+Simple android project utilizing Room as a database to store VINs (Vehicle Identification Numbers).
 
-Used multiple sources to complete differents parts of the project.
+Used multiple sources to complete different parts of the project. Writing first in java, and then rewriting in Kotlin as I having trouble with listeners in and understanding the more verbose java code.
 
-One totorial for creating multiple activities... another to get the database working.
+Open the project to the blank list view.  Use the "+" floating action button to add a list (VIN / Notes) item to the MainActivity.  Note: The VIN must be no shorter than 17 characters (a Toast wil warn you if its too short).
 
-Project is simple - it is the very beginning of a VIN (vehicle identificaion number) list - so it would ideally have the data entry limited to 17 characters - converted to all caps.  
+To Edit/Update tap the entry and it will allow you to change the list item.  The UI logic is a work in progress, but are straightforward.
 
-Open prject and see landing page - use "enter" to view the list page.  Use the "+" floating action button to add a list item.  Use the back button to navigate out of the app.
+The main page is a recycle view, so if you add enough items you can scroll down to view more.
 
-To delete all vins uninstall app.
+To delete all VINs uninstall app.
 
 
