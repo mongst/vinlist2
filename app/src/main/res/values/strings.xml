@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">vinlist2</string>
-    <string name="title_activity_2">Activity2</string>
+    <string name="app_name">Vin List</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update_the_vin">Update the VIN</string>
+    <string name="update_notes_optional">Update Notes (Optional)</string>
+    <string name="update_vin">Update VIN</string>
+    <string name="delete_comment">Delete Comment</string>
 </resources>

@@ -7,33 +7,62 @@
     tools:context=".UpdateVin"
     android:padding="24dp">
 
-
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:id="@+id/current_vin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:textSize="24sp"
+        />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/update_vin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Update the VIN"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:id="@+id/current_notes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:textSize="18sp"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/update_notes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Update Notes (Optional)"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/update_vin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update VIN"/>
+        android:hint="@string/update_the_vin"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/update_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/update_notes_optional"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/insertButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            />
+
+        <Button
+            android:id="@+id/deleteNotesButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_comment"
+            android:layout_weight="1"
+
+            />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

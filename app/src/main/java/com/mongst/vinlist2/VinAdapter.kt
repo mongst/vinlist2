@@ -5,31 +5,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.mongst.vinlist2.data.AppDatabase
 
-internal class VinAdapter(private val vins: List<Vin>) : RecyclerView.Adapter<VinAdapter.ViewHolder>() {
+class VinAdapter(val launchUpdateVin: (Int?) -> Unit) : RecyclerView.Adapter<VinAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): VinAdapter.ViewHolder {
+    val vins = db.vinDao().getAllVins()
+
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.vin_row, viewGroup, false)
         return ViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: VinAdapter.ViewHolder, position: Int) {
-        holder.createVin.text = vins[position].createVin
-        holder.notesVin.text = vins[position].notesVin
     }
 
     override fun getItemCount(): Int {
         return vins.size
     }
 
-    internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var createVin: TextView
-        var notesVin: TextView
-
-        init {
-            createVin = itemView.findViewById(R.id.enter_vin)
-            notesVin = itemView.findViewById(R.id.notes_vin)
-        }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.updateView(position)
     }
 
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val stringVin = itemView.findViewById<TextView>(R.id.string_vin)
+        val notesVin = itemView.findViewById<TextView>(R.id.notes_vin)
+        val divider = itemView.findViewById<View>(R.id.divider)
+
+
+        fun updateView(position: Int) {
+            stringVin.text = vins[position].stringVin
+            notesVin.text = vins[position].notesVin
+            itemView.setOnClickListener{launchUpdateVin(vins[position].id)}
+
+        }
+    }
 }
